@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photo Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-[#292929]">
@@ -16,92 +20,32 @@
 
     <div
       class="photos-container grid xl:grid-cols-3 lg:grid-cols-2 gap-6 sm:p-12 p-3 mx-auto max-w-[1400px]"
+    ></div>
+
+    <!-- <div
+      class="clicked-photo-container fixed top-0 bg-black/50 w-screen h-screen flex flex-col justify-center items-center gap-6 p-4 md:p-12"
     >
-      <!-- <div
-        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden group transform transition-transform duration-500 hover:scale-105 relative cursor-pointer"
-      >
-        <img
-          class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-          alt=""
-        />
-        <div
-          class="photo-overlay transform transition-transform duration-500 group-hover:translate-y-0 bg-gradient-to-b from-transparent to-black/70 h-30 absolute bottom-0 w-full p-12 pb-0 pt-20 px-6 translate-y-18"
+      <div class="close w-full flex justify-end">
+        <button
+          class="close-btn cursor-pointer w-12 h-12 rounded-full bg-[#1a1a1b] outline-3 outline-[#3d3d3d] text-white text-2xl flex justify-center items-center"
         >
-          <h3 class="text-white">Image Title</h3>
-        </div>
+          <i class="fa-solid fa-xmark text-white"></i>
+        </button>
       </div>
       <div
-        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden group relative"
+        class="clicked-photo max-w-[90vw] max-h-[90vh] rounded-lg overflow-hidden"
       >
         <img
           class="w-full h-full object-cover"
-          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-          alt=""
+          src="https://images.pexels.com/photos/27697765/pexels-photo-27697765.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+          alt="clicked photo"
         />
-        <div
-          class="photo-overlay transform transition-transform duration-500 group-hover:translate-y-0 bg-gradient-to-b from-transparent to-black/70 h-30 absolute bottom-0 w-full p-12 pb-0 pt-20 px-6 translate-y-18"
-        >
-          <h3 class="text-white">Image Title</h3>
-        </div>
       </div>
-      <div
-        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden group relative"
-      >
-        <img
-          class="w-full h-full object-cover"
-          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-          alt=""
-        />
-        <div
-          class="photo-overlay transform transition-transform duration-500 group-hover:translate-y-0 bg-gradient-to-b from-transparent to-black/70 h-30 absolute bottom-0 w-full p-12 pb-0 pt-20 px-6 translate-y-18"
-        >
-          <h3 class="text-white">Image Title</h3>
-        </div>
+      <div class="details text-center text-white text-lg md:text-2xl">
+        Traffic under glowing neon signs in Bangkok, creating a dynamic urban
+        night scene.
       </div>
-      <div
-        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden group relative"
-      >
-        <img
-          class="w-full h-full object-cover"
-          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-          alt=""
-        />
-        <div
-          class="photo-overlay transform transition-transform duration-500 group-hover:translate-y-0 bg-gradient-to-b from-transparent to-black/70 h-30 absolute bottom-0 w-full p-12 pb-0 pt-20 px-6 translate-y-18"
-        >
-          <h3 class="text-white">Image Title</h3>
-        </div>
-      </div>
-      <div
-        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden group relative"
-      >
-        <img
-          class="w-full h-full object-cover"
-          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-          alt=""
-        />
-        <div
-          class="photo-overlay transform transition-transform duration-500 group-hover:translate-y-0 bg-gradient-to-b from-transparent to-black/70 h-30 absolute bottom-0 w-full p-12 pb-0 pt-20 px-6 translate-y-18"
-        >
-          <h3 class="text-white">Image Title</h3>
-        </div>
-      </div>
-      <div
-        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden group relative"
-      >
-        <img
-          class="w-full h-full object-cover"
-          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-          alt=""
-        />
-        <div
-          class="photo-overlay transform transition-transform duration-500 group-hover:translate-y-0 bg-gradient-to-b from-transparent to-black/70 h-30 absolute bottom-0 w-full p-12 pb-0 pt-20 px-6 translate-y-18"
-        >
-          <h3 class="text-white">Image Title</h3>
-        </div>
-      </div> -->
-    </div>
+    </div> -->
 
     <script src="function.js"></script>
     <script src="main.js"></script>
