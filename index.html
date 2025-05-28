@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#292929]">
+    <div
+      class="photo-gallery h-56 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-center flex flex-col items-center justify-center"
+    >
+      <h1 class="text-5xl text-white mb-4 tracking-widest">PHOTO GALLERY</h1>
+      <p class="text-[#d2d0ee] text-xl">Explore our curated collection</p>
+    </div>
+
+    <div
+      class="photos-container grid xl:grid-cols-3 lg:grid-cols-2 gap-6 sm:p-12 p-3 mx-auto max-w-[1400px]"
+    >
+      <div
+        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden group"
+      >
+        <img
+          class="w-full h-full object-cover"
+          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+          alt=""
+        />
+        <div
+          class="photo-overlay transform transition-transform duration-300 group-hover:-translate-y-15"
+        >
+          <h3 class="text-white">Image Title</h3>
+        </div>
+      </div>
+      <div
+        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-cover"
+          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+          alt=""
+        />
+        <div class="photo-overlay">
+          <h3>Image Title</h3>
+        </div>
+      </div>
+      <div
+        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-cover"
+          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+          alt=""
+        />
+        <div class="photo-overlay">
+          <h3>Image Title</h3>
+        </div>
+      </div>
+      <div
+        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-cover"
+          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+          alt=""
+        />
+        <div class="photo-overlay">
+          <h3>Image Title</h3>
+        </div>
+      </div>
+      <div
+        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-cover"
+          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+          alt=""
+        />
+        <div class="photo-overlay">
+          <h3>Image Title</h3>
+        </div>
+      </div>
+      <div
+        class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-cover"
+          src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+          alt=""
+        />
+        <div class="photo-overlay">
+          <h3>Image Title</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="function.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
