@@ -10,8 +10,6 @@ document.addEventListener("click", (e) => {
     displayClickedPhoto(e.target);
   }
 
-  console.log(e.target);
-
   // close photo
   if (
     e.target.classList.contains("clicked-photo-container") ||

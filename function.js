@@ -64,13 +64,24 @@ function displayClickedPhoto(clickedPhoto) {
         </button>
       </div>
       <div
-        class="clicked-photo max-w-[90vw] max-h-[90vh] rounded-lg overflow-hidden"
+        class="clicked-photo relative max-w-[95vw] max-h-[95vh] flex items-center sm:p-4 gap-6"
       >
+        <button
+          class="prev-btn cursor-pointer -left-22 max-[1430px]:left-5 absolute w-14 h-14 max-[1430px]:w-12 max-[1430px]:h-12 max-[700px]:w-10 max-[700px]:h-10 rounded-full bg-[#1a1a1b] outline-3 outline-[#3d3d3d] text-white text-2xl flex justify-center items-center"
+        >
+          <i class="fa-solid fa-chevron-left text-white"></i>
+        </button>
         <img
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover rounded-lg"
           src="${target.querySelector("img").src}"
           alt="clicked photo"
         />
+        <button
+          class="next-btn cursor-pointer -right-22 max-[1430px]:right-5 absolute w-14 h-14 max-[1430px]:w-12 max-[1430px]:h-12 max-[700px]:w-10 max-[700px]:h-10 rounded-full bg-[#1a1a1b] outline-3 outline-[#3d3d3d] text-white text-2xl flex justify-center items-center"
+        >
+          <i class="fa-solid fa-chevron-right text-white"></i>
+        </button>
+
       </div>
       <div class="details text-center text-white text-lg md:text-2xl">
       ${target.querySelector("h3").innerText}
