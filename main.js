@@ -1,7 +1,9 @@
 let photosContainer = document.querySelector(".photos-container");
+let skeleton = document.querySelector(".skeleton");
 
 fetchPhotos().then((data) => {
   displayPhotos(data, photosContainer);
+  skeleton.classList.add("hidden");
 });
 
 document.addEventListener("click", (e) => {
