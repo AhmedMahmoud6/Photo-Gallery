@@ -10,16 +10,27 @@ document.addEventListener("click", (e) => {
     displayClickedPhoto(e.target);
   }
 
-  console.log(e.target);
   // close photo
-  if (
-    e.target.classList.contains("clicked-photo-container") ||
-    document.querySelector(".close").contains(e.target)
-  ) {
-    document.querySelector(".clicked-photo-container").remove();
-  }
+  try {
+    if (
+      e.target.classList.contains("clicked-photo-container") ||
+      document.querySelector(".close").contains(e.target)
+    ) {
+      document.querySelector(".clicked-photo-container").remove();
+    }
+  } catch (err) {}
 
   // next photo
-  if (document.querySelector(".next-btn").contains(e.target)) {
-  }
+  try {
+    if (document.querySelector(".next-btn").contains(e.target)) {
+      nextPhoto();
+    }
+  } catch (err) {}
+
+  try {
+    // prev photo
+    if (document.querySelector(".prev-btn").contains(e.target)) {
+      prevPhoto();
+    }
+  } catch (err) {}
 });

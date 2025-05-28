@@ -31,7 +31,7 @@ function displayPhotos(data, photosContainer) {
     let photoCardHtml = `
         <div
         class="photo-card lg:min-w-90 xl:max-w-105 h-72 rounded-lg overflow-hidden group transform transition-transform duration-500 hover:scale-105 relative cursor-pointer"
-        id=${idCounter}
+        id=image-${idCounter}
       >
         <img
           class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -50,12 +50,16 @@ function displayPhotos(data, photosContainer) {
 }
 
 function displayClickedPhoto(clickedPhoto) {
-  let target = clickedPhoto.closest(".photo-card");
+  if (document.querySelector(".clicked-photo-container"))
+    document.querySelector(".clicked-photo-container").remove();
+
+  let target = clickedPhoto.closest(".photo-card") || clickedPhoto;
   let targetId = target.id;
+  let formattedId = targetId.match(/\d+/g)[0];
   let imageHtml = `
     <div
       class="clicked-photo-container fixed top-0 bg-black/50 w-screen h-screen flex flex-col justify-center items-center gap-6 p-4 md:p-12"
-      id=${targetId}
+      id=${formattedId}
     >
       <div class="close w-full flex justify-end">
         <button
@@ -90,4 +94,30 @@ function displayClickedPhoto(clickedPhoto) {
     </div>
     `;
   document.body.insertAdjacentHTML("beforeend", imageHtml);
+}
+
+function nextPhoto() {
+  let targetId = document
+    .querySelector(".next-btn")
+    .closest(".clicked-photo-container").id;
+
+  if (Number(targetId) + 1 === 7)
+    displayClickedPhoto(document.querySelector("#image-1"));
+  else
+    displayClickedPhoto(
+      document.querySelector(`#image-${Number(targetId) + 1}`)
+    );
+}
+
+function prevPhoto() {
+  let targetId = document
+    .querySelector(".next-btn")
+    .closest(".clicked-photo-container").id;
+
+  if (Number(targetId) - 1 === 0)
+    displayClickedPhoto(document.querySelector("#image-6"));
+  else
+    displayClickedPhoto(
+      document.querySelector(`#image-${Number(targetId) - 1}`)
+    );
 }
