@@ -10,11 +10,16 @@ document.addEventListener("click", (e) => {
     displayClickedPhoto(e.target);
   }
 
+  console.log(e.target);
   // close photo
   if (
     e.target.classList.contains("clicked-photo-container") ||
     document.querySelector(".close").contains(e.target)
   ) {
     document.querySelector(".clicked-photo-container").remove();
+  }
+
+  // next photo
+  if (document.querySelector(".next-btn").contains(e.target)) {
   }
 });

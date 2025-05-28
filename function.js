@@ -1,11 +1,12 @@
 const API_KEY = "jHzgUyOpNks1JyA5bYk8habW0pw8v27GL0ni69b7mNbTlx1vbFmeAf4p";
+const query = "Nature";
 const page = Math.floor((Math.random() * 8000) / 6);
 let idCounter = 0;
 
 async function fetchPhotos() {
   try {
     const response = await fetch(
-      `https://api.pexels.com/v1/curated?per_page=6&page=${page}`,
+      `https://api.pexels.com/v1/search?query=${query}&per_page=6&page=${page}`,
       {
         headers: {
           Authorization: API_KEY,
