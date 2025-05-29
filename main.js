@@ -1,5 +1,6 @@
 let photosContainer = document.querySelector(".photos-container");
 let skeleton = document.querySelector(".skeleton");
+let loadError = document.querySelector(".loading-error");
 
 fetchPhotos().then((data) => {
   displayPhotos(data, photosContainer);

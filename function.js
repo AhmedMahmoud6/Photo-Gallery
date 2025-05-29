@@ -21,6 +21,8 @@ async function fetchPhotos() {
     return data;
   } catch (error) {
     console.error("Error fetching photos:", error);
+    skeleton.classList.add("hidden");
+    loadError.classList.remove("hidden");
   }
 }
 
